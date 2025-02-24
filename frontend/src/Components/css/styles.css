@@ -1,0 +1,583 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+img,
+a,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #343a40, #495057);
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLinks a {
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navLinks a:hover {
+  color: #fce28a;
+}
+
+.navButton {
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom right, #ffe98a, #f8f9fa);
+  border-bottom: 5px solid #ffc107;
+  gap: 2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.heroContent {
+  flex: 1;
+  text-align: left;
+  max-width: 600px;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.explore {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.explore:hover {
+  background-color: #ff9f00;
+  color: #fff;
+}
+
+.heroImageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.heroImage:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroContent {
+    margin-bottom: 2rem;
+  }
+
+  .heroImage {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* About Section */
+.aboutSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background-color: #e9ecef;
+  gap: 2rem;
+}
+
+.aboutText {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.aboutImage {
+  flex: 1;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/* Services Section */
+.servicesSection {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.servicesRow {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.serviceCard {
+  background-color: #f8f9fa;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  background-color: #ffe98a;
+}
+
+.serviceCard img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.serviceCard h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.serviceCard p {
+  color: #666;
+}
+
+/* Footer Section */
+.footer {
+  background: linear-gradient(135deg, #343a40, #495057);
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.footer-text {
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  color: #ffc107;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #fce28a;
+}
+
+/* Popup Overlay */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+  z-index: 999;
+}
+
+.popupContainer {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.popupHeader h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.closeButton {
+  background-color: #ffc107;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.closeButton:hover {
+  background-color: #e0a800;
+}
+
+.popupCards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.popupCard {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 45%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.popupCard:hover {
+  transform: translateY(-5px);
+  background-color: #ffe98a;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Floating Icons */
+.floatingIcons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure icons do not block interactions */
+  overflow: hidden;
+}
+
+.floatingIcon {
+  position: absolute;
+  opacity: 0.2;
+  animation: floatAnimation 10s infinite ease-in-out;
+
+  /* Reduce size of icons */
+  width: 70px; /* You can adjust this size */
+  height: 70px;
+}
+
+.floatingIcon1 {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floatingIcon2 {
+  left: 30%;
+  animation-delay: 3s;
+}
+
+.floatingIcon3 {
+  left: 50%;
+  animation-delay: 6s;
+}
+
+.floatingIcon4 {
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.floatingIcon5 {
+  left: 90%;
+  animation-delay: 4s;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(100vh);
+  }
+  50% {
+    transform: translateY(50vh);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0.2;
+  }
+}
+
+/* Button Styling */
+.navButton, .explore {
+  padding: 0.75rem 1.75rem;
+  font-weight: bold;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Initial shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.navButton:hover, .explore:hover {
+  background-color: #ff9f00; /* Change color on hover */
+  color: #ffffff; /* Text color for better contrast */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Expanded shadow on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Close Button Popup Styling */
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #495057;
+  transition: transform 0.2s ease-in-out;
+}
+
+.closeButton:hover {
+  color: #dc3545; /* Red color for hover */
+  transform: scale(1.2); /* Enlarges slightly on hover */
+}
+
+/* Font Definitions */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@400;600&display=swap');
+
+/* Body Text */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Headline */
+.heroTitle {
+  font-family: "Oswald", sans-serif; /* Modern font pairing */
+  font-size: 3.5rem; /* Larger font size */
+  font-weight: 600;
+  color: #333; /* Slightly darker color */
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+/* Body Text for Description */
+.heroDescription {
+  font-family: "Poppins", Arial, sans-serif; /* Maintain clean, readable font */
+  font-size: 1.125rem; /* Slightly larger font size */
+  color: #4a4a4a; /* Darker shade for readability */
+  margin-bottom: 2rem;
+}
+
+/* Shadow and Border for Hero Image */
+.heroImage {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+  border: 3px solid #ffc107; /* Add a border */
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.heroImage:hover {
+  transform: scale(1.05);
+}
+
+/* Parallax Container */
+.heroImageContainer {
+  position: relative;
+  overflow: hidden;
+  height: 350px; /* Set height to ensure parallax effect visibility */
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.scrollDownArrow {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+.scrollDownArrow img {
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* Testimonials Section */
+.testimonialsSection {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+  border-top: 5px solid #ffc107;
+  margin-bottom: 2rem;
+}
+
+.testimonialsTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Container to align testimonials properly */
+.testimonialsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Testimonial Card */
+.testimonialCard {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonialImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonialContent p {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #495057;
+  font-style: italic;
+}
+
+.testimonialRating {
+  color: #ffc107;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonialContent span {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0.5rem;
+}
