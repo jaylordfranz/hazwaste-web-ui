@@ -1,0 +1,232 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+img,
+a,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* User Management Section */
+.user-management {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.user-management table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.user-management th,
+.user-management td {
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.user-management th {
+  background-color: #343a40;
+  color: white;
+}
+
+.user-management tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.user-management button {
+  background-color: #ffc107;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.user-management button:hover {
+  background-color: #e0a800;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-container h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.popup-container button {
+  background-color: #28a745;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-container button:hover {
+  background-color: #218838;
+}
+
+/* Waste Charts Section */
+.waste-charts {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.waste-charts h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Report Management Section */
+.report-management {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-management table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-management th,
+.report-management td {
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.report-management th {
+  background-color: #343a40;
+  color: white;
+}
+
+.report-management tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.report-management td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.report-management td a:hover {
+  text-decoration: underline;
+}
+
+.report-management button {
+  background-color: #ffc107;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.report-management button:hover {
+  background-color: #e0a800;
+}
+
+/* Waste Charts Section */
+.waste-charts {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.waste-charts h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Message Reporting Section */
+.message-reporting {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-reporting textarea {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  resize: none;
+}
+
+.message-reporting button {
+  background-color: #28a745;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.message-reporting button:hover {
+  background-color: #218838;
+}

@@ -7,6 +7,8 @@ import About from "./Components/about";
 import { Login } from "./Components/login";
 import { Register } from "./Components/Register";
 import AdminDashboard from "./Components/admin/AdminDashboard";
+import ScanReport from './Components/admin/ScanReport';
+import MessageReport from './Components/admin/MessageReport';
 import UserDashboard from "./Components/user/UserDashboard";
 import History from "./Components/user/History";
 import Maps from "./Components/user/Maps";
@@ -22,6 +24,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/AdminDashboard" element={<AdminDashboard />} />
+        <Route path="scan-report/:id" element={<ScanReport />} />
+        <Route path="message-report" element={<MessageReport />} />
         <Route path="/UserDashboard" element={<UserDashboard />} />
         <Route path="/History" element={<History />} />
         <Route path="/Maps" element={<Maps />} />
