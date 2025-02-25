@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
@@ -35,6 +35,28 @@ export default function Home() {
       behavior: "smooth",
     });
   };
+
+  const videoRef = useRef(null);
+
+useEffect(() => {
+  const video = videoRef.current;
+  if (!video) return;
+
+  const stopVideoAt = 55; // Stop at 0:55
+
+  const checkTime = () => {
+    if (video.currentTime >= stopVideoAt) {
+      video.currentTime = 0; // Reset to the beginning
+      video.play(); // Continue playing
+    }
+  };
+
+  video.addEventListener("timeupdate", checkTime);
+
+  return () => {
+    video.removeEventListener("timeupdate", checkTime);
+  };
+}, []);
 
   return (
     <div>
@@ -98,6 +120,13 @@ export default function Home() {
             className="heroImage"
           />
         </div>
+      </section>
+
+      <section className="video-section">
+        <video ref={videoRef} className="video small-video" controls>
+          <source src="./assets/hazwaste-trailer.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </section>
 
       {/* Testimonials Section */}

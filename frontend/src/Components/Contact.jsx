@@ -29,8 +29,8 @@ const Contact = () => {
           <div className="contactInfo">
             <h3>Contact Information</h3>
             <p><strong>Email:</strong> support@hazwaste.com</p>
-            <p><strong>Phone:</strong> +1 234 567 890</p>
-            <p><strong>Address:</strong> 123 Green Street, Eco City, Earth</p>
+            <p><strong>Phone:</strong> 09123456789</p>
+            <p><strong>Address:</strong> Taguig, Metro Manila</p>
             <p>Our support team is available Monday to Friday, 9 AM - 6 PM.</p>
           </div>
           <div className="contactForm">

@@ -133,8 +133,8 @@ const ContactUs = () => {
           <div className="contactSidebar">
             <h2 className="sidebarTitle">Contact Information</h2>
             <p><strong>Email:</strong> support@hazwaste.com</p>
-            <p><strong>Phone:</strong> +1 234 567 890</p>
-            <p><strong>Address:</strong> 123 Waste St, Green City, GC 12345</p>
+            <p><strong>Phone:</strong> 09123456789</p>
+            <p><strong>Address:</strong> Taguig, Metro Manila</p>
           </div>
         </div>
       </div>
