@@ -19,7 +19,7 @@ const servicesData = [
   {
     title: "Real-Time Tips",
     description:
-      "Receive expert advice and personalized SMS notifications on effective waste disposal techniques, ensuring a greener and cleaner environment.",
+      "Receive expert advice and personalized mail notifications on effective waste disposal techniques, ensuring a greener and cleaner environment.",
     image: "https://cdn-icons-png.flaticon.com/512/1903/1903162.png",
   },
 ];
@@ -35,7 +35,7 @@ const Services = () => {
           <Link to="/about">About Us</Link>
           <Link to="/services">Services</Link>
           <Link to="/contact">Contact</Link>
-          <button className="navButton btn btn-warning">Get Started</button>
+          <button className="navButton btn btn-warning" onClick={() => window.location.href = "/login"}>Get Started</button>
         </nav>
       </header>
 
@@ -57,9 +57,9 @@ const Services = () => {
       <footer className="footer">
         <p className="footer-text">© 2025 HazWaste. All rights reserved.</p>
         <div className="footer-links">
-          <Link to="/">Privacy Policy</Link>
-          <Link to="/">Terms of Service</Link>
-          <Link to="/">Contact Us</Link>
+          <Link to="/policy">Privacy Policy</Link>
+          <Link to="/terms">Terms of Service</Link>
+          <Link to="/contact-us">Contact Us</Link>
         </div>
       </footer>
     </div>

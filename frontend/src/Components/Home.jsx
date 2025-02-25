@@ -32,41 +32,41 @@ export default function Home() {
   const handleScrollDown = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-  };  
+  };
 
   return (
     <div>
       {/* Floating Icons */}
       <div className="floatingIcons">
         <img
-          src="./assets/leaf-icon.png"
-          alt="Leaf Icon"
+          src="./assets/bin.png"
+          alt="Bin Icon"
           className="floatingIcon floatingIcon1"
         />
         <img
-          src="./assets/tree-icon.png"
-          alt="Tree Icon"
+          src="./assets/biohazard-sign.png"
+          alt="Biohazard Icon"
           className="floatingIcon floatingIcon2"
         />
         <img
-          src="./assets/recycle-icon.png"
-          alt="Recycle Icon"
+          src="./assets/danger.png"
+          alt="Danger Icon"
           className="floatingIcon floatingIcon3"
         />
         <img
-          src="./assets/earth-icon.png"
-          alt="Earth Icon"
+          src="./assets/garbage-truck.png"
+          alt="Garbage Truck Icon"
           className="floatingIcon floatingIcon4"
         />
         <img
-          src="./assets/flower-icon.png"
-          alt="Flower Icon"
+          src="./assets/recycle-bin.png"
+          alt="Recycle Bin Icon"
           className="floatingIcon floatingIcon5"
         />
       </div>
-      
+
       {/* Header Section */}
       <header className="header">
         <div className="logo">HazWaste</div>
@@ -75,69 +75,168 @@ export default function Home() {
           <Link to="/about">About Us</Link>
           <Link to="/services">Services</Link>
           <Link to="/contact">Contact</Link>
-          <button className="navButton btn btn-warning">Get Started</button>
+          <button className="navButton btn btn-warning" onClick={() => window.location.href = "/login"}>Get Started</button>
         </nav>
       </header>
 
       {/* Hero Section */}
-<section className="heroSection">
-  <div className="heroContent">
-    <h1 className="heroTitle text-warning">HazWaste: Smart waste sorting app!</h1>
-    <p className="heroDescription">
-      Your reliable partner for responsible waste disposal. Experience the
-      power of AI-driven waste management.
-    </p>
-    <button className="explore btn btn-warning" onClick={handleExploreClick}>
-      Explore Services
-    </button>
-  </div>
-  <div className="heroImageContainer">
-    <img
-      src="./assets/hazhero.webp"
-      alt="HazWaste Image"
-      className="heroImage"
-    />
-  </div>
-</section>
+      <section className="heroSection">
+        <div className="heroContent">
+          <h1 className="heroTitle text-warning">HazWaste: Smart waste sorting app!</h1>
+          <p className="heroDescription">
+            Your reliable partner for responsible waste disposal. Experience the
+            power of AI-driven waste management.
+          </p>
+          <button className="explore btn btn-warning" onClick={handleExploreClick}>
+            Explore Services
+          </button>
+        </div>
+        <div className="heroImageContainer">
+          <img
+            src="./assets/hazhero.webp"
+            alt="HazWaste Image"
+            className="heroImage"
+          />
+        </div>
+      </section>
 
       {/* Testimonials Section */}
-<section className="testimonialsSection">
-  <h2 className="testimonialsTitle">What Our Users Say</h2>
-  <div className="testimonialsContainer">
-    <div className="testimonialCard">
-      <img src="/assets/user1.webp" alt="Alex J." className="testimonialImage" />
-      <div className="testimonialContent">
-        <p>"HazWaste has completely transformed how I handle waste disposal. Highly recommend it!"</p>
-        <div className="testimonialRating">⭐⭐⭐⭐⭐</div>
-        <span>- Alex J.</span>
+      <section className="testimonialsSection">
+        <h2 className="testimonialsTitle">Ratings and Reviews</h2>
+
+        {/* Rating and Reviews Bar */}
+        <div className="ratingsContainer">
+          <div className="ratingBar">
+            <div className="ratingStars" style={{ width: "85%" }}></div>
+          </div>
+          <div className="ratingsCount">
+            <span className="ratingNumber">4.5</span> (95M reviews)
+          </div>
+        </div>
+
+        {/* Reviews */}
+        <div className="reviewsContainer">
+          {/* Review 1 */}
+          <div className="review">
+            <div className="reviewText">
+              <p>
+                "HazWaste has been a game-changer for our community! The AI-powered
+                waste sorting system makes it so much easier to manage our waste disposal."
+              </p>
+            </div>
+            <div className="reviewFooter">
+              <div className="reviewerInfo">
+                <span className="reviewerName">Alex J.</span>
+                <span className="reviewDate">January 15, 2025</span>
+              </div>
+              <div className="helpfulness">
+                <span>6,807 people found this review helpful</span>
+                <div className="helpfulnessButtons">
+                  <button>Yes</button>
+                  <button>No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Review 2 */}
+          <div className="review">
+            <div className="reviewText">
+              <p>
+                "This app helps locate nearby recycling centers and sorts waste
+                quickly. It's an essential tool for our eco-friendly efforts!"
+              </p>
+            </div>
+            <div className="reviewFooter">
+              <div className="reviewerInfo">
+                <span className="reviewerName">Maria S.</span>
+                <span className="reviewDate">February 1, 2025</span>
+              </div>
+              <div className="helpfulness">
+                <span>5,104 people found this review helpful</span>
+                <div className="helpfulnessButtons">
+                  <button>Yes</button>
+                  <button>No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Review 3 */}
+          <div className="review">
+            <div className="reviewText">
+              <p>
+                "The AI feature for waste classification is incredible. It's like having
+                an expert guide for sorting waste, making everything so much simpler."
+              </p>
+            </div>
+            <div className="reviewFooter">
+              <div className="reviewerInfo">
+                <span className="reviewerName">John D.</span>
+                <span className="reviewDate">February 5, 2025</span>
+              </div>
+              <div className="helpfulness">
+                <span>4,567 people found this review helpful</span>
+                <div className="helpfulnessButtons">
+                  <button>Yes</button>
+                  <button>No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Review 4 */}
+          <div className="review">
+            <div className="reviewText">
+              <p>
+                "Using HazWaste has improved how we manage our local waste facilities.
+                The mail-based system makes tracking waste easy and reliable."
+              </p>
+            </div>
+            <div className="reviewFooter">
+              <div className="reviewerInfo">
+                <span className="reviewerName">Lisa K.</span>
+                <span className="reviewDate">January 28, 2025</span>
+              </div>
+              <div className="helpfulness">
+                <span>3,410 people found this review helpful</span>
+                <div className="helpfulnessButtons">
+                  <button>Yes</button>
+                  <button>No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Review 5 */}
+          <div className="review">
+            <div className="reviewText">
+              <p>
+                "Fantastic app! The integration with real-time tips and recycling
+                location mapping has made our waste disposal efforts more effective."
+              </p>
+            </div>
+            <div className="reviewFooter">
+              <div className="reviewerInfo">
+                <span className="reviewerName">David P.</span>
+                <span className="reviewDate">February 3, 2025</span>
+              </div>
+              <div className="helpfulness">
+                <span>8,000 people found this review helpful</span>
+                <div className="helpfulnessButtons">
+                  <button>Yes</button>
+                  <button>No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Scroll-Down Icon */}
+      <div className="scrollDownArrow" onClick={handleScrollDown}>
+        <img src="./assets/scroll-down-icon.png" alt="Scroll Down" />
       </div>
-    </div>
-
-    <div className="testimonialCard">
-      <img src="/assets/user2.webp" alt="Maria S." className="testimonialImage" />
-      <div className="testimonialContent">
-        <p>"The AI-powered waste classification is a game-changer for our community."</p>
-        <div className="testimonialRating">⭐⭐⭐⭐⭐</div>
-        <span>- Maria S.</span>
-      </div>
-    </div>
-
-    <div className="testimonialCard">
-      <img src="/assets/user3.jpg" alt="John D." className="testimonialImage" />
-      <div className="testimonialContent">
-        <p>"Locating nearby recycling centers has never been easier. HazWaste makes it seamless!"</p>
-        <div className="testimonialRating">⭐⭐⭐⭐⭐</div>
-        <span>- John D.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-{/* Scroll-Down Icon */}
-<div className="scrollDownArrow" onClick={handleScrollDown}>
-  <img src="./assets/scroll-down-icon.png" alt="Scroll Down" />
-</div>
 
       {/* Popup Cards */}
       {showPopup && (
@@ -160,7 +259,7 @@ export default function Home() {
               </div>
               <div className="popupCard">
                 <h3>Real-Time Tips</h3>
-                <p>Receive SMS tips for effective waste disposal.</p>
+                <p>Receive mail tips for effective waste disposal.</p>
               </div>
             </div>
           </div>
@@ -171,9 +270,9 @@ export default function Home() {
       <footer className="footer">
         <p className="footer-text">© 2025 HazWaste. All rights reserved.</p>
         <div className="footer-links">
-          <Link to="/">Privacy Policy</Link>
-          <Link to="/">Terms of Service</Link>
-          <Link to="/">Contact Us</Link>
+          <Link to="/policy">Privacy Policy</Link>
+          <Link to="/terms">Terms of Service</Link>
+          <Link to="/contact-us">Contact Us</Link>
         </div>
       </footer>
     </div>

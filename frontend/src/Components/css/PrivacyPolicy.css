@@ -1,0 +1,224 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+img,
+a,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Floating Icons */
+.floatingIcons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floatingIcon {
+  position: absolute;
+  opacity: 0.2;
+  animation: floatAnimation 10s infinite ease-in-out;
+  width: 70px;
+  height: 70px;
+}
+
+.floatingIcon1 {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floatingIcon2 {
+  left: 30%;
+  animation-delay: 3s;
+}
+
+.floatingIcon3 {
+  left: 50%;
+  animation-delay: 6s;
+}
+
+.floatingIcon4 {
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.floatingIcon5 {
+  left: 90%;
+  animation-delay: 4s;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(100vh);
+  }
+  50% {
+    transform: translateY(50vh);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0.2;
+  }
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #343a40, #495057);
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLinks a {
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navLinks a:hover {
+  color: #fce28a;
+}
+
+.navButton {
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+/* Privacy Policy Container */
+.policyContainer {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.policyTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.policyContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.policyText {
+  flex: 3;
+}
+
+.policySidebar {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Links */
+.sidebarTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sidebarLinks {
+  list-style-type: none;
+}
+
+.sidebarLinks li {
+  margin: 1rem 0;
+}
+
+.sidebarLinks a {
+  color: #343a40;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.sidebarLinks a:hover {
+  color: #ffc107;
+}
+
+/* Section Titles */
+.sectionTitle {
+  font-size: 2.2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Text Styling */
+.policyDescription,
+.policyText {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Footer Section */
+.footer {
+  background: linear-gradient(135deg, #343a40, #495057);
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.footer-text {
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  color: #ffc107;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #fce28a;
+}

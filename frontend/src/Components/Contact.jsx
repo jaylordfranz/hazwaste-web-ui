@@ -14,7 +14,7 @@ const Contact = () => {
           <Link to="/about">About Us</Link>
           <Link to="/services">Services</Link>
           <Link to="/contact">Contact</Link>
-          <button className="navButton btn btn-warning">Get Started</button>
+          <button className="navButton btn btn-warning" onClick={() => window.location.href = "/login"}>Get Started</button>
         </nav>
       </header>
 
@@ -52,9 +52,9 @@ const Contact = () => {
       <footer className="footer">
         <p className="footer-text">© 2025 HazWaste. All rights reserved.</p>
         <div className="footer-links">
-          <Link to="/">Privacy Policy</Link>
-          <Link to="/">Terms of Service</Link>
-          <Link to="/">Contact Us</Link>
+          <Link to="/policy">Privacy Policy</Link>
+          <Link to="/terms">Terms of Service</Link>
+          <Link to="/contact-us">Contact Us</Link>
         </div>
       </footer>
     </div>
