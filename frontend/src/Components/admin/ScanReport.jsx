@@ -5,7 +5,7 @@ import '../css/ScanReport.css';
 const ScanReport = () => {
   // Demo scan report data
   const reportData = {
-    imagePlaceholder: 'https://via.placeholder.com/300',
+    imagePlaceholder: '/assets/waste-report.jpg',
     wasteType: 'Hazardous',
     wasteCategory: 'Electronic Waste',
     detectedMaterials: [
@@ -16,8 +16,8 @@ const ScanReport = () => {
     ],
     disposalInstructions: 'Dispose of this waste at a certified hazardous waste disposal facility.',
     recoveryFacilities: [
-      { name: 'Taguig Recycling Facility', address: '123 Taguig St, Taguig City' },
-      { name: 'Green Recyclers', address: '456 Green St, Taguig City' },
+      { name: 'Taguig Recycling Facility', address: '123 Bonifacio St, Taguig City' },
+      { name: 'Green Recyclers', address: '63 Agusan St, Taguig City' },
     ],
     recyclabilityScore: 85,  // 0 to 100 score
     environmentalImpact: 'Moderate impact on the environment due to plastic and metal content.',

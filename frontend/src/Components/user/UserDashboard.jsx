@@ -48,13 +48,13 @@ const UserDashboard = () => {
   <h2 className="brand">HazWaste</h2>
   <div className="profile-section">
     <div className="profile-icon">👤</div>
-    <button className="edit-button">Edit</button>
+    <button className="edit-button" onClick={() => window.location.href='/EditProfile'}>Edit</button>
   </div>
   <nav className="nav-buttons">
     <a href="/dashboard" className={`nav-btn ${activeTab === "Dashboard" ? "active" : ""}`} onClick={() => setActiveTab("Dashboard")}>Dashboard</a>
     <a href="/history" className={`nav-btn ${activeTab === "History" ? "active" : ""}`} onClick={() => setActiveTab("History")}>History</a>
     <a href="/maps" className={`nav-btn ${activeTab === "Maps" ? "active" : ""}`} onClick={() => setActiveTab("Maps")}>Maps</a>
-    <a href="/awareness" className={`nav-btn ${activeTab === "Awareness" ? "active" : ""}`} onClick={() => setActiveTab("Awareness")}>Awareness</a>
+    <a href="/Awareness" className={`nav-btn ${activeTab === "Awareness" ? "active" : ""}`} onClick={() => setActiveTab("Awareness")}>Awareness</a>
   </nav>
 </aside>
 
@@ -85,7 +85,7 @@ const UserDashboard = () => {
                           >
                             {widget.id === "waste-info" && (
                               <div className="waste-info">
-                                <img src="/assets/mask.png" alt="Placeholder" className="waste-image" />
+                                <img src="/assets/face-mask.jpg" alt="Placeholder" className="waste-image" />
                                 <p className="category"><strong>Category:</strong> Medical Waste</p>
                                 <p className="disposal"><strong>Disposal Instructions:</strong> Dispose at designated hazardous waste facility. Do not mix with regular trash.</p>
                               </div>

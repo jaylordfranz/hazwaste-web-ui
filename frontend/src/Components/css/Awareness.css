@@ -1,0 +1,133 @@
+/* src/Components/css/Awareness.css */
+.awareness-container {
+    padding: 2rem;
+    text-align: center;
+    background-color: #adadad;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.awareness-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff9800;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.score {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.falling-item {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #ffc107;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fallAnimation 3s linear infinite;
+}
+
+@keyframes fallAnimation {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(50px); opacity: 1; }
+}
+
+.bins-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+.bin {
+    padding: 1rem 2rem;
+    background-color: #ff9800;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bin:hover {
+    background-color: #f57c00;
+    transform: scale(1.1);
+}
+
+.pause-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #fbc02d;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pause-button:hover {
+    background-color: #f9a825;
+}
+
+.game-over-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-over-popup button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff9800;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-over-popup button:hover {
+    background-color: #f57c00;
+}
+
+@media (max-width: 768px) {
+    .bins-container {
+        flex-direction: column;
+    }
+    .bin {
+        width: 80%;
+        margin-bottom: 0.5rem;
+    }
+}

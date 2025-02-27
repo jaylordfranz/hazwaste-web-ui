@@ -13,8 +13,11 @@ import AdminDashboard from "./Components/admin/AdminDashboard";
 import ScanReport from './Components/admin/ScanReport';
 import MessageReport from './Components/admin/MessageReport';
 import UserDashboard from "./Components/user/UserDashboard";
+import EditProfile from "./Components/user/EditProfile";
 import History from "./Components/user/History";
+import ScanDetail from "./Components/user/ScanDetail";
 import Maps from "./Components/user/Maps";
+import Awareness from "./Components/user/Awareness";
 
 function App() {
   return (
@@ -33,8 +36,11 @@ function App() {
         <Route path="scan-report/:id" element={<ScanReport />} />
         <Route path="message-report" element={<MessageReport />} />
         <Route path="/UserDashboard" element={<UserDashboard />} />
+        <Route path="/EditProfile" element={<EditProfile />} />
         <Route path="/History" element={<History />} />
+        <Route path="/ScanDetail" element={<ScanDetail />} />
         <Route path="/Maps" element={<Maps />} />
+        <Route path="/Awareness" element={<Awareness />} />
       </Routes>
     </Router>
   );

@@ -5,6 +5,7 @@ import "./css/styles.css";
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
+  const videoRef = useRef(null);
 
   const handleExploreClick = () => {
     setShowPopup(true);
@@ -36,27 +37,28 @@ export default function Home() {
     });
   };
 
-  const videoRef = useRef(null);
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
 
-useEffect(() => {
-  const video = videoRef.current;
-  if (!video) return;
+    const stopVideoAt = 55; // Stop at 0:55
 
-  const stopVideoAt = 55; // Stop at 0:55
+    // Play video automatically
+    video.play();
 
-  const checkTime = () => {
-    if (video.currentTime >= stopVideoAt) {
-      video.currentTime = 0; // Reset to the beginning
-      video.play(); // Continue playing
-    }
-  };
+    const checkTime = () => {
+      if (video.currentTime >= stopVideoAt) {
+        video.currentTime = 0; // Reset to the beginning
+        video.play(); // Continue playing from the beginning
+      }
+    };
 
-  video.addEventListener("timeupdate", checkTime);
+    video.addEventListener("timeupdate", checkTime);
 
-  return () => {
-    video.removeEventListener("timeupdate", checkTime);
-  };
-}, []);
+    return () => {
+      video.removeEventListener("timeupdate", checkTime);
+    };
+  }, []);
 
   return (
     <div>
@@ -120,13 +122,6 @@ useEffect(() => {
             className="heroImage"
           />
         </div>
-      </section>
-
-      <section className="video-section">
-        <video ref={videoRef} className="video small-video" controls>
-          <source src="./assets/hazwaste-trailer.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </section>
 
       {/* Testimonials Section */}

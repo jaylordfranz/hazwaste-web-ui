@@ -57,7 +57,7 @@ const History = () => {
             <div className="history-info">
               <h3 className="history-classification">{item.classification}</h3>
               <p className="history-timestamp">{item.date} - {item.time}</p>
-              <a href={`/history/${item.id}`} className="history-link">See More</a>
+              <a href={`/ScanDetail`} className="history-link">See More</a>
             </div>
           </div>
         ))}
